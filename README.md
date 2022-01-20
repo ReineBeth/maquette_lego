@@ -5,3 +5,7 @@ Reproduction de la maquette de lego. Personnaliser le contenu de la page avec un
 # outils utilisés
 
 gulp, sass, javaScript, HTML, CSS
+
+# Démarrer un serveur
+
+gulp dev

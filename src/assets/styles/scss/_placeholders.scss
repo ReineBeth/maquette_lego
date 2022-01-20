@@ -1,0 +1,18 @@
+@use 'variables';
+
+%reset_bouton {
+	background: none;
+	border: none;
+	cursor: pointer;
+	outline: none;
+}
+
+%reset_liens {
+	outline: none;
+	text-decoration: none;
+}
+
+%reset_liste_navigation {
+	display: inline-flex;
+	list-style-type: none;
+}

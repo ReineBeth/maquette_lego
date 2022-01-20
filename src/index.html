@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://kit.fontawesome.com/0d5dafc31b.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="./assets/styles/css/styles.css">
+		<title>Travail Long 2 : Légo</title>
+	</head>
+	<body>
+		<header>
+			<div class="header_banniere">
+				<button class="btn_retour" aria-label="Voir jeux de Klei">
+					<i class="fas fa-arrow-left" aria-hidden="true"></i> 
+					<span>&nbsp;Jeux de Klei</span>
+				</button>
+				<div class="header_banniere_container">
+					<button class="btn_left" aria-label="Vers bannière précédente">
+						<i class="fas fa-chevron-left" aria-hidden="true"></i>
+					</button>
+					<p><i lang="en">Don't Starve Together</i> à plusieurs DLC!</p>
+					<a href="https://store.steampowered.com/dlc/322330/Dont_Starve_Together/">Visiter la boutique</a>
+					<button class="btn_right" aria-label="Vers bannière suivante">
+						<i class="fas fa-chevron-right" aria-hidden="true"></i>
+					</button>
+				</div>
+				<button class="btn_close" aria-label="Retirer bannière">
+					<i class="fas fa-times" aria-hidden="true"></i>
+				</button> 
+				<div class="wrapper_btn">
+					<button class="btn_user" aria-label="Vers compte de l'utilisateur">
+						<i class="fas fa-user" aria-hidden="true"></i>
+						<span>Compte</span>
+					</button>
+					<button class="btn_privilege" aria-label="Vers points VIP">
+						<i class="fas fa-crown" aria-hidden="true"></i>
+						<span><abbr title="Very Important Person">VIP</abbr></span>
+					</button>
+				</div>
+			</div>
+			<nav class="header_nav" aria-label="Navigation principale">
+				<div class="header_nav_menu">
+					<button class="btn_burger" aria-label="Ouvrir menu hamburger">
+						<i class="fas fa-bars" aria-hidden="true"></i>
+					</button>
+					<img class="logo_dst" src="./assets/images/icone_dst_sans-texte.ico" alt="Logo de Don't Starve Together">
+					<ul class="header_nav_menu_liste">
+						<li>
+							<a href="#personnages">Personnages</a>
+						</li>
+						<li>
+							<a href="#conseils">Conseils</a>
+						</li>
+						<li>
+							<a href="#monstres">Monstres</a>
+						</li>
+					</ul>
+				</div>
+				<ul class="header_nav_icones">
+					<li>
+						<button class="btn_loupe" aria-label="Rechercher">
+							<i class="fas fa-search" aria-hidden="true"></i>
+						</button>
+					</li>
+					<li>
+						<button class="btn_user" aria-label="Vers compte utilisateur">
+							<i class="fas fa-user" aria-hidden="true"></i>
+						</button>
+						</li>
+					<li>
+						<button class="btn_coeur" aria-label="Vers Wishlist">
+							<i class="fas fa-heart" aria-hidden="true"></i>
+						</button>
+						<span>0</span>
+					</li>
+					<li>
+						<button class="btn_panier" aria-label="Vers panier d'achats">
+							<i class="fas fa-shopping-cart" aria-hidden="true"></i>
+						</button>
+						<span>0</span>
+					</li>
+				</ul>
+			</nav>
+			<nav class="header_nav_burger">
+				<div class="header_nav_burger_haut">
+					<p class="menu">Menu</p>
+					<button class="btn_fermer_menu">
+						<i class="fas fa-times" aria-hidden="true"></i>
+					</button>
+				</div>
+				<button class="zonejeu">
+					<i class="fas fa-arrow-right" aria-hidden="true"></i>
+					<span>&nbsp;Zone de jeu</span>
+				</button>
+				<ul class="header_nav_burger_liste">
+					<li>
+						<a class="liens_burger" href="javascript:;">Accueil</a>
+					</li>
+					<li>
+						<a class="liens_burger" href="#personnages">Personnages</a>
+						<i  class="menu_burger_icone fas fa-chevron-right"></i>
+					</li>
+					<li>
+						<a class="liens_burger" href="#conseils">Conseils</a>
+						<i class="menu_burger_icone fas fa-chevron-right"></i>
+					</li>
+					<li>
+						<a class="liens_burger" href="#monstres">Monstres</a>
+						<i class="menu_burger_icone fas fa-chevron-right"></i>
+					</li>
+					<li>
+						<a class="liens_burger" href="javascript:;">Aide</a>
+						<i class="menu_burger_icone fas fa-chevron-right"></i>
+					</li>
+					<li>
+						<div class="container">
+							<i class="menu_burger_icone fas fa-user"></i>
+							<a class="liens_burger" href="javascript:;">Compte</a>
+						</div>
+					</li>
+					<li>
+						<div class="container">
+							<i class="menu_burger_icone fas fa-crown"></i>
+							<a class="liens_burger" href="javascript:;"><abbr title="Very Important Person">VIP</abbr></a>
+						</div>
+					</li>
+					<li>
+						<div class="container">
+							<a class="liens_burger" href="javascript:;">Liste de souhaits</a>
+							<span>(0)</span>
+						</div>
+					</li>
+					<li>
+						<div class="container">
+							<a class="liens_burger" href="javascript:;">Mon panier</a>
+							<span>(0)</span>
+						</div>
+					</li>
+					<li>
+						<div class="container">
+							<i class="menu_burger_icone fas fa-desktop"></i>
+							<a class="liens_burger" href="javascript:;">Aller sur le site de Klei</a>
+						</div>
+					</li>
+				</ul>
+			</nav>
+			<div class="header_introduction">
+				<img src="./assets/images/banniere_couverture.png" alt="Bannière mettant en vedette Winona, Wilson et Willow de Don't Starve">
+				<div class="header_introduction_texte">
+					<h1><i lang="en">Don't Starve Together </i></h1>
+					<p>Combien de jours serez-vous capable de survivre?</p>
+					<button class="btn_info" aria-label="Ouvrir modale information jeux">
+						<span>Voir fiche du jeu&nbsp;</span>
+						<i class="fas fa-chevron-right" aria-hidden="true"></i>
+					</button>
+					<button aria-label="ajouter jeu au panier">
+						<span>Acheter&nbsp;</span>
+						<i class="fas fa-chevron-right" aria-hidden="true"></i>
+					</button>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="main_biome">
+				<ul class="main_biome_ul">
+					<li>
+						<a href="javascript:;">
+							<img src="./assets/images/biome_forest_md.png" alt="Biome de forest">
+							<p>Forêt</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="./assets/images/biome_desert_md.png" alt="Biome du desert">
+							<p>Désert</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="./assets/images/biome_marais_md.png" alt="Biome du marécage">
+							<p>Marécage</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="./assets/images/biome_savane_md.png" alt="Biome de la savane">
+							<p>Savane</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="./assets/images/biome_autome_md.png" alt="Biome de l'automne">
+							<p>Automnal</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="./assets/images/biome_grassland_md.png" alt="Biome de la prairie">
+							<p>Prairie</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="./assets/images/biome_cave_md.png" alt="Les sous-terrains">
+							<p>Caverne</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="./assets/images/biome_ocean_md.png" alt="Biome de l'océan">
+							<p>Océan</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<section class="section_personnages" id="personnages">
+				<div class="carousel">
+					<h2>Les personnages</h2>
+					<ul class="carousel_ul">
+						<li class="carousel_ul_item">
+							<div class="carousel_ul_item_img">
+								<a href="javascript:;" class="carousel_ul_item_img_a">
+									<img src="./assets/images/wanda.png" alt="Wanda">
+								</a>
+								<button class="btn_ajout-favoris" aria-label="ajouter au favoris">
+									<i class="far fa-heart" aria-hidden="true"></i>
+								</button>
+								<p class="info">Nouveau</p>
+							</div>
+							<div class="carousel_ul_item_textes">
+								<h3>Elle contrôle le temps</h3>
+								<div class="wrapper-btn">
+									<p>Wanda</p>
+									<button class="btn_fiche" aria-label="Ouvrir fiche personnage Wanda">Voir fiche personnage</button>
+								</div>
+							</div>
+						</li>
+						<li class="carousel_ul_item">
+							<div class="carousel_ul_item_img">
+								<a href="javascript:;" class="carousel_ul_item_img_a">
+									<img src="./assets/images/wigfrid.png" alt="Wigfrig">
+								</a>
+								<button  class="btn_ajout-favoris" aria-label="ajouter au favoris">
+									<i class="far fa-heart" aria-hidden="true"></i>
+								</button>	
+							</div>
+							<div class="carousel_ul_item_textes">
+								<h3>La guerrière carnivore</h3>
+								<div class="wrapper-btn">
+									<p>Wigfrig</p>
+									<button class="btn_fiche" aria-label="Ouvrir fiche personnage Wigfrid">Voir fiche personnage</button>
+								</div>
+							</div>
+						</li>
+						<li class="carousel_ul_item">
+							<div class="carousel_ul_item_img">
+								<a href="javascript:;" class="carousel_ul_item_img_a">
+									<img src="./assets/images/wortox.png" alt="Wortox">
+								</a>
+								<button class="btn_ajout-favoris" aria-label="ajouter au favoris">
+									<i class="far fa-heart" aria-hidden="true"></i>
+								</button>	
+								<p class="info"><abbr title="Contenu téléchargeable">DLC</abbr></p>
+							</div>
+							<div class="carousel_ul_item_textes">
+								<h3>C'est un diablotin</h3>
+								<div class="wrapper-btn">
+									<p>Wortox</p>
+									<button class="btn_fiche" aria-label="Ouvrir fiche personnage Wortox">Voir fiche personnage</button>
+								</div>
+							</div>
+						</li>
+						<li class="carousel_ul_item">
+							<div class="carousel_ul_item_img">
+								<a href="javascript:;" class="carousel_ul_item_img_a">
+									<img src="./assets/images/wx-78.png" alt="Wx-78">
+								</a>
+								<button class="btn_ajout-favoris" aria-label="ajouter au favoris">
+									<i class="far fa-heart" aria-hidden="true"></i>
+								</button>	
+							</div>
+							<div class="carousel_ul_item_textes">
+								<h3>Pas un mangeur difficile</h3>
+								<div class="wrapper-btn">
+									<p>WX-78</p>
+									<button class="btn_fiche" aria-label="Ouvrir fiche personnage WX-78">Voir fiche personnage</button>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<button class="btn_suivant" aria-label="aller vers images suivantes">
+						<i class="fas fa-chevron-right" aria-hidden="true"></i>
+					</button>
+					<div class="carousel_scroll" aria-hidden="true"></div>
+				</div>
+			</section>
+			<section class="section_conseil" id="conseils">
+				<div class="wrapper_carte">
+					<h2>Conseil de survie</h2>
+					<ul class="cartes">
+						<li class="cartes_conseil">
+							<a href="javascript:;">
+								<img src="./assets/images/map.jpg" alt="Une carte du jeu dont starve">
+								<h3>Explorer!</h3>
+								<p class="description">Connaître la carte permet de se construire à un endroit judicieux</p>
+								<div class="container">
+									<p class="savoir_plus">En savoir plus</p>
+									<i class="fas fa-chevron-right"></i>
+								</div>
+							</a>
+						</li>
+						<li class="cartes_conseil">
+							<a href="javascript:;">
+								<img src="./assets/images/banniere_chaudron.png" alt="Warly qui cuisine">
+								<h3>Connaître son personnage</h3>
+								<p class="description">Tous les personnages ont leurs forces et faiblesses</p>
+								<div class="container">
+									<p class="savoir_plus">En savoir plus</p>
+									<i class="fas fa-chevron-right"></i>
+								</div>
+							</a>
+						</li>
+						<li class="cartes_conseil">
+							<a href="javascript:;">
+								<img src="./assets/images/banniere_ferme.png" alt="3 personnages de dont starve qui donne de l'eau a une plante">		
+								<h3>S'assurer d'avoir une source de nourriture</h3>
+								<p class="description">Ce conseil est littéralement dans le nom du jeu</p>
+								<div class="container">
+									<p class="savoir_plus">En savoir plus</p>
+									<i class="fas fa-chevron-right"></i>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="section_saisons">
+				<div class="wrapper_carte">
+					<h2>Les saisons</h2>
+					<ul class="cartes">
+						<li class="cartes_saisons">
+							<a href="javascript:;">
+								<img src="./assets/images/saison_automne.png" alt="Automne">
+								<h3>Automne</h3>
+								<p class="description">Habituellement la saison de départ!</p>
+								<div class="container">
+									<p class="savoir_plus">En savoir plus</p> 
+									<i class="fas fa-chevron-right"></i>
+								</div>
+							</a>
+						</li>
+						<li class="cartes_saisons">
+							<a href="javascript:;">
+								<img src="./assets/images/saison_hiver.jpg" alt="Hiver">
+								<h3>Hiver</h3>
+								<p class="description">Il fait froid, la nourriture manque!</p>
+								<div class="container">
+									<p class="savoir_plus">En savoir plus</p>
+									<i class="fas fa-chevron-right"></i>
+								</div>
+							</a>
+						</li>
+						<li class="cartes_saisons">
+							<a href="javascript:;">
+								<img src="./assets/images/saison_printemps.jfif" alt="Printemps">
+								<h3>Printemps</h3>
+								<p class="description">Le soleil est de retour et les abeilles attaquent!</p>
+								<div class="container">
+									<p class="savoir_plus">En savoir plus</p>
+									<i class="fas fa-chevron-right"></i>
+								</div>
+							</a>
+						</li>
+						<li class="cartes_saisons">
+							<a href="javascript:;">
+								<img src="./assets/images/saison_ete.png" alt="Été">
+								<h3>Été</h3>
+								<p class="description">Il fait chaud... allons pêcher à l'Oasis!</p>
+								<div class="container">
+									<p class="savoir_plus">En savoir plus</p>
+									<i class="fas fa-chevron-right"></i>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<div class="banniere_waterlogged">
+				<div class="banniere_waterlogged_wrapper">
+					<img class="banniere_waterlogged_wrapper_img" src="./assets/images/waterlogged_dlc.png" alt="Waterlogged une extension de Don't Starve Together">
+					<div class="banniere_waterlogged_wrapper_texte">
+						<p><i lang="en">Waterlogged</i> est une extension qui rajoute plusieurs éléments au jeu de <i lang="en">Don't Starve Together</i>!</p>
+						<button>
+							<span>Lire l'article&nbsp;</span>
+							<i class="fas fa-chevron-right" aria-hidden="true"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			<section class="section_monstres" id="monstres">		
+				<div class="carousel">
+					<h2>Les monstres</h2>
+					<ul class="carousel_ul">
+						<li class="carousel_ul_item">
+							<div class="carousel_ul_item_img">
+								<a href="javascript:;" class="carousel_ul_item_img_a">
+									<img src="./assets/images/bee_queen.png" alt="Queen Bee">
+								</a>
+								<button class="btn_ajout-favoris" aria-label="ajouter au favoris">
+									<i class="far fa-heart" aria-hidden="true"></i>
+								</button>	
+							</div>
+							<div class="carousel_ul_item_textes">
+								<h3>Ne touche pas à sa maison</h3>
+								<div class="wrapper-btn">
+									<p><i lang="en">Queen&nbsp;Bee</i></p>
+									<button class="btn_fiche" aria-label="Ouvrir fiche Queen Bee">Lire fiche du monstre</button>
+								</div>
+							</div>
+						</li>
+						<li class="carousel_ul_item">
+							<div class="carousel_ul_item_img">
+								<a href="javascript:;" class="carousel_ul_item_img_a">
+									<img src="./assets/images/giant_dragonfly.png" alt="Dragonfly">
+								</a>
+								<button class="btn_ajout-favoris" aria-label="ajouter au favoris">
+									<i class="far fa-heart" aria-hidden="true"></i>
+								</button>	
+							</div>
+							<div class="carousel_ul_item_textes">
+								<h3>Un dragon cracheur de feu</h3>
+								<div class="wrapper-btn">
+									<p><i lang="en">Dragonfly</i></p>
+									<button class="btn_fiche" aria-label="Ouvrir fiche Dragonfly">Lire fiche du monstre</button>
+								</div>
+							</div>
+						</li>
+						<li class="carousel_ul_item">
+							<div class="carousel_ul_item_img">
+								<a href="javascript:;" class="carousel_ul_item_img_a">
+									<img src="./assets/images/deerclops.png" alt="Deerclops">
+								</a>
+								<button class="btn_ajout-favoris" aria-label="ajouter au favoris">
+									<i class="far fa-heart" aria-hidden="true"></i>
+								</button>	
+								<p class="info">Hiver</p>
+							</div>
+							<div class="carousel_ul_item_textes">
+								<h3>Il est prêt à tout détruire</h3>
+								<div class="wrapper-btn">
+									<p><i lang="en">Deerclops</i></p>
+									<button class="btn_fiche" aria-label="Ouvrir fiche Deerclops">Lire fiche du monstre</button>
+								</div>
+							</div>
+						</li>
+						<li class="carousel_ul_item">
+							<div class="carousel_ul_item_img">
+								<a href="javascript:;" class="carousel_ul_item_img_a">
+									<img src="./assets/images/giant_moose-goose.png" alt="Moose-Goose">
+								</a>
+								<button class="btn_ajout-favoris" aria-label="ajouter au favoris">
+									<i class="far fa-heart" aria-hidden="true"></i>
+								</button>
+								<p class="info">Printemps</p>	
+							</div>
+							<div class="carousel_ul_item_textes">
+								<h3>Une maman protectrice</h3>
+								<div class="wrapper-btn">
+									<p><i>Moose&nbsp;Goose</i></p>
+									<button class="btn_fiche" aria-label="Ouvrir fiche Moose Goose">Lire fiche du monstre</button>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<button class="btn_suivant" aria-label="aller vers images suivantes">
+						<i class="fas fa-chevron-right" aria-hidden="true"></i>
+					</button>
+					<div class="carousel_scroll" aria-hidden="true"></div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<nav class="footer_nav">
+				<div class="container_haut-navigation">
+					<div class="container_haut-navigation_logo">
+						<img src="./assets/images/logo_klei.png" alt="Logo de Klei">
+						<button class="btn_klei">
+							<i class="fas fa-desktop" aria-hidden="true"></i>
+							<span>&nbsp;Aller sur le site de Klei</span>
+						</button>
+					</div>	
+					<a href="https://shop.klei.com/" target="_blank">Visiter la boutique Klei</a>
+					<a href="https://store.steampowered.com/app/322330/Dont_Starve_Together/" target="_blank">Acheter un jeu</a>
+				</div>
+				<div class="navigation_large">
+					<ul class="navigation_large_ul">
+						<li class="navigation_large_ul_li">
+							<h2>Au sujet de Klei</h2>
+							<ul>
+								<li><a href="javascript:;">La mission</a></li>
+								<li><a href="javascript:;">Les objectifs</a></li>
+								<li><a href="javascript:;">Politiques de publications</a></li>
+								<li><a href="javascript:;">Actualités Klei</a></li>
+								<li><a href="javascript:;">Carrières chez Klei</a></li>
+							</ul>
+						</li>
+						<li class="navigation_large_ul_li">
+							<h2>Autres jeux de Klei</h2>
+							<ul>
+								<li><a href="javascript:;">eets Munchies</a></li>
+								<li><a href="javascript:;">Griftlands</a></li>
+								<li><a href="javascript:;">Hot Lava</a></li>
+								<li><a href="javascript:;">Invisible inc.</a></li>
+								<li><a href="javascript:;">Mark of the Ninja</a></li>
+								<li><a href="javascript:;">Oxygen Not Included</a></li>
+								<li><a href="javascript:;">Shank</a></li>
+							</ul>
+						</li>
+						<li class="navigation_large_ul_li">
+							<h2>Notre communauté</h2>
+							<ul>
+								<li><a href="javascript:;">Forums</a></li>
+								<li><a href="javascript:;">Infolettre</a></li>
+								<li><a href="javascript:;">Fan art</a></li>
+							</ul>
+						</li>
+						<li class="navigation_large_ul_li">
+							<h2>Nous contacter</h2>
+							<ul>
+								<li><a href="javascript:;">Supporter nos jeux</a></li>
+								<li><a href="javascript:;">Supporter notre site internet</a></li>
+								<li><a href="javascript:;">Foire aux Questions</a></li>
+								<li><a href="javascript:;">Nos médias sociaux</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="wrapper_recherche-media">
+					<form class="formulaire">
+						<label for="recherche_site">Rechercher sur le site&nbsp;:</label>
+						<input type="search" id="recherche_site" name="recherche_site" aria-label="Rechercher dans le site" placeholder="Rechercher sur le site">
+						<button class="btn_chevron-right" aria-label="Confirmer recherce">
+							<i class="fas fa-chevron-right" aria-hidden="true"></i>
+						</button>
+					</form>
+					<div class="dropdown">
+						<ul class="dropdown_liste">
+							<li>
+								<h2>
+									<button class="btn_ouvrir_dropdown" aria-label="Ouvrir dropdown">
+										<span>Au sujet de Klei</span>
+										<i class="btn_dropdown_down fas fa-chevron-down" aria-hidden="true"></i>
+									</button>
+								</h2>
+								<ul class="dropdown_deroulant">
+									<li class="dropdown_deroulant_item"><a href="javascript:;">La mission</a></li>
+									<li class="dropdown_deroulant_item"><a href="javascript:;">Les objectifs</a></li>
+									<li class="dropdown_deroulant_item"><a href="javascript:;">Politiques de publications</a></li>
+									<li class="dropdown_deroulant_item"><a href="javascript:;">Actualités Klei</a></li>
+									<li class="dropdown_deroulant_item"><a href="javascript:;">Carrière chez Klei</a></li>
+								</ul>
+							</li>
+							<li>
+								<h2>
+									<button class="btn_ouvrir_dropdown" aria-label="Ouvrir dropdown">
+										<span>Autres jeux de Klei</span>
+										<i class="btn_dropdown_down fas fa-chevron-down" aria-hidden="true"></i>
+									</button>
+								</h2>
+								<ul class="dropdown_deroulant">
+									<li class="dropdown_deroulant_item"><a href="javascript:;">eets Munchies</a></li>
+									<li class="dropdown_deroulant_item"><a href="javascript:;">Griftlands</a></li>
+									<li class="dropdown_deroulant_item"><a href="javascript:;">Hot Lava</a></li>
+									<li class="dropdown_deroulant_item"><a href="javascript:;">Invisible inc.</a></li>
+									<li class="dropdown_deroulant_item"><a href="javascript:;">Mark of the Ninja</a></li>
+									<li class="dropdown_deroulant_item"><a href="javascript:;">Oxygen Not Included</a></li>
+									<li class="dropdown_deroulant_item"><a href="javascript:;">Shank</a></li>
+								</ul>
+							</li>
+							<li>
+								<h2>
+									<button class="btn_ouvrir_dropdown" aria-label="Ouvrir dropdown">
+										<span>Notre communauté</span>
+										<i class="btn_dropdown_down fas fa-chevron-down" aria-hidden="true"></i>
+									</button>
+								</h2>
+								<ul class="dropdown_deroulant">
+									<li class="dropdown_deroulant_item"><a href="javascript:;">Forums</a></li>
+									<li class="dropdown_deroulant_item"><a href="javascript:;">Infolettre</a></li>
+									<li class="dropdown_deroulant_item"><a href="javascript:;">Fan art</a></li>
+								</ul>
+							</li>
+							<li>
+								<h2>
+									<button class="btn_ouvrir_dropdown" aria-label="Ouvrir dropdown">
+										<span>Nous contacter</span>
+										<i class="btn_dropdown_down fas fa-chevron-down" aria-hidden="true"></i>
+									</button>
+								</h2>
+								<ul class="dropdown_deroulant">
+									<li class="dropdown_deroulant_item"><a href="javascript:;">Supporter nos jeux</a></li>
+									<li class="dropdown_deroulant_item"><a href="javascript:;">Supporter notre site internet</a></li>
+									<li class="dropdown_deroulant_item"><a href="javascript:;">Foire aux Questions</a></li>
+									<li class="dropdown_deroulant_item"><a href="javascript:;">Nos médias sociaux</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="media-sociaux">
+						<h3>Nous suivre&nbsp;:</h3>
+						<ul>
+							<li><a href="javascript:;" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+							<li><a href="javascript:;" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="javascript:;" aria-label="Steam"><i class="fab fa-steam"></i></a></li>
+							<li><a href="javascript:;" aria-label="Youtube"><i class="fab fa-youtube"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="container_bas-navigation">
+					<ul>
+						<li><a href="javascript:;">Centre des communautés</a></li>
+						<li><a href="javascript:;">Support</a></li>
+						<li><a href="javascript:;">Kit de presse</a></li>
+						<li><a href="javascript:;">Politique de confidentialité</a></li>
+						<li><a href="javascript:;">Accessibilité</a></li>
+						<li><a href="javascript:;">Plan du site</a></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="footer_bas">
+				<p>Ici doit être placé un texte très important. Des lignes en bas de pages qui informent l’utilisateur sur des règles à propos de notre compagnie. Je n’étais pas inspiré pour le texte alors j’écris ces lignes qui ne veulent rien dire. Bon... là-dessus je vais vous laisser sur une partie des paroles de la chanson : “Je chante comme une casserole” des Colocs: Je me lève le matin, je commence à chanter. Ma poulette et mes voisins me pressent de m'la fermer. En guise de cocorico, j'entonne ce petit air. Qui tire les gens de leur dodo et les met su'l gros nerf. Je chante comme une casserole. Et je m'y fais revenir à maintes reprises. Mon look de sexe-symbol. Vous fait oublier cette torture auditive. Ma voix défonce les tympans sans commisérations. Les enfants et les éléphants n'y font pas exception.</p>			
+			</div>
+		</footer>
+
+		<script src="./assets/scripts/vendors/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+@use 'variables';
+
+@mixin bouton($couleur-fond, $couleur-texte) {
+	background: $couleur-fond;
+	border-radius: 5px;
+	color: $couleur-texte;
+	margin: 1.5em 1em;
+	padding: 10px 20px;
+}
+
+@mixin bouton_effet($couleur-bordure, $couleur-fond, $couleur-texte, $couleur-focus) {
+
+	&:hover {
+		background: $couleur-fond;
+		color: $couleur-texte;
+		outline: 2px solid $couleur-bordure;
+	}
+
+	&:focus {
+		outline: 2px solid $couleur-focus;
+		box-shadow: 0 0 15px $couleur-focus;
+	}
+}
+
+@mixin liens_effet($couleur-focus, $deco: underline) {
+
+	&:hover {
+		text-decoration: $deco;
+	}
+
+	&:focus {
+		outline: 1px solid $couleur-focus;
+		box-shadow: 0 0 20px $couleur-focus;
+	}
+}
+
+@mixin breakpoint($width) {
+	@if $width == tablet-petit {
+		@media (min-width: 600px) {@content};
+	}
+
+	@if $width == tablet-grand {
+		@media (min-width:900px) {@content};
+	} 
+	
+	@if $width == desktop-plus {
+		@media (min-width: 1200px) {@content};
+	}	
+
+	@if $width == desktop-xl {
+		@media (min-width: 1600px) {@content}; 
+	}
+}

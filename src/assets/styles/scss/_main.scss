@@ -1,0 +1,465 @@
+@use 'variables';
+@use 'mixins';
+
+main {
+	grid-column: 1 / 7;
+	font-size: 1.4rem;
+
+	h2 {
+		font-size: 1.45em;
+	}
+
+	.main_biome {
+		font-size: 0.86em;
+		padding: 20px;
+
+		&_ul {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			justify-content: center;
+			padding: 0;
+			margin: 0 auto;
+			width: 100%;
+
+			li {
+				text-align: center;
+				min-width: 60px;
+				padding: 1em;
+
+				a {
+					color: variables.$couleur_noir;
+					display: block;
+					width: 90%;
+
+					@include mixins.liens_effet(
+						variables.$couleur_accent_fonce
+					);
+
+					img {
+						width: 100%;
+						max-width: 80px;
+					}
+				}
+			}
+		}
+
+		@include mixins.breakpoint(tablet-petit) {
+			&_ul {
+				flex-wrap: nowrap;
+				width: 100%;
+
+				li {
+					padding: 0;
+				}
+			}
+		}
+
+		@include mixins.breakpoint(tablet-grand) {
+			&_ul {
+				li {
+					width: 100px;
+				}
+
+				img {
+					min-width: 80px;
+				}
+			}
+		}
+	}
+
+	.section_personnages,
+	.section_monstres {
+		padding: 40px 20px;
+
+		h3 {
+			font-size: 1.15em;
+			font-weight: 500;
+		}
+
+		@-moz-document url-prefix() {
+			.carousel {
+				max-width: 85vw;
+			}
+		}
+
+		.carousel {
+			.btn_suivant {
+				display: none;
+
+				@include mixins.bouton_effet(
+					variables.$couleur_blanc,
+					variables.$couleur_soutien,
+					variables.$couleur_blanc,
+					variables.$couleur_accent-pale
+				);
+			}
+
+			&_scroll {
+				background: rgba(variables.$couleur_gris, 0.4);
+				margin: 25px 0;
+				position: relative;
+				height: 5px;
+				width: 100%;
+
+				&::after {
+					content: '';
+					background: variables.$couleur_soutien;
+					position: absolute;
+					height: 5px;
+					width: 12.5%;
+				}
+			}
+
+			&_ul {
+				display: flex;
+				flex-wrap: nowrap;
+				overflow-x: hidden;
+				padding: 0;
+
+				&_item {
+					display: flex;
+					align-items: stretch;
+					flex-direction: column;
+					flex-grow: 1;
+					flex-shrink: 0;
+					margin-right: 5px;
+					padding-right: 20px;
+					height: 100%;
+					width: 75%;
+					max-width: 400px;
+
+					&_img {
+						aspect-ratio: 1 / 1;
+						border: 1px solid variables.$couleur_gris;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						overflow: hidden;
+						position: relative;
+						width: 100%;
+
+						a {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+						}
+
+						img {
+							width: 65%;
+							transition: 0.3s ease width;
+						}
+
+						&:hover {
+							img {
+								width: 75%;
+							}
+						}
+
+						.btn_ajout-favoris {
+							background: variables.$couleur_soutien;
+							border-radius: 50%;
+							color: variables.$couleur_blanc;
+							font-size: 15px;
+							margin: 10px;
+							padding: 0.5em;
+							position: absolute;
+							top: 0;
+							left: 0;
+
+							@include mixins.bouton_effet(
+								variables.$couleur_soutien,
+								variables.$couleur_blanc,
+								variables.$couleur_soutien,
+								variables.$couleur_accent-pale
+							);
+						}
+
+						.info {
+							background: variables.$couleur_accent_pale;
+							border: 3px double variables.$couleur_soutien;
+							font-size: 0.86em;
+							position: absolute;
+							top: 0;
+							right: 0;
+							margin: 10px;
+							padding: 0.5em;
+						}
+					}
+
+					&_textes {
+						.wrapper-btn {
+							display: flex;
+							align-items: center;
+							justify-content: flex-start;
+
+							p {
+								font-size: 1.3em;
+								font-weight: bold;
+							}
+
+							button {
+								font-size: 1em;
+								font-weight: 500;
+								padding: 15px;
+
+								@include mixins.bouton(
+									variables.$couleur_accent_fonce,
+									variables.$couleur_noir
+								);
+								@include mixins.bouton_effet(
+									variables.$couleur_accent-fonce,
+									variables.$couleur_blanc,
+									variables.$couleur_noir,
+									variables.$couleur_soutien
+								);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		@include mixins.breakpoint(tablet-petit) {
+			.carousel {
+				position: relative;
+
+				.btn_suivant {
+					background: variables.$couleur_blanc;
+					border: 1px solid variables.$couleur_soutien;
+					border-radius: 50%;
+					color: variables.$couleur_soutien;
+					display: block;
+					font-size: 25px;
+					padding: 0.2em 0.45em;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-200%);
+					right: calc(20% - 80px);
+					z-index: 10;
+				}
+
+				&_ul_item {
+					width: 40%;
+					height: 100%;
+
+					img {
+						width: 70%;
+					}
+				}
+			}
+		}
+
+		@include mixins.breakpoint(desktop-plus) {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+
+			h2 {
+				flex-basis: 100%;
+			}
+
+			.carousel {
+				.btn_suivant {
+					right: -30px;
+				}
+
+				&_ul_item {
+					height: 100%;
+					width: 23%;
+					max-width: 300px;
+
+					img {
+						width: 70%;
+					}
+
+					.wrapper-btn {
+						flex-wrap: wrap;
+
+						button {
+							flex-basis: 100%;
+							margin: 3px 3px;
+							padding: 15px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.section_conseil,
+	.section_saisons {
+		display: flex;
+		justify-content: center;
+		padding: 20px;
+
+		.wrapper_carte {
+			display: flex;
+			flex-direction: column;
+			max-width: 1300px;
+
+			h3 {
+				font-size: 1.3em;
+				font-weight: bold;
+			}
+		}
+
+		.cartes {
+			padding: 0;
+			text-align: center;
+
+			.container {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 20px;
+
+				.fa-chevron-right {
+					margin-left: 10px;
+				}
+			}
+
+			.savoir_plus {
+				font-size: 1.15em;
+				font-weight: bold;
+			}
+		}
+
+		a {
+			color: variables.$couleur_noir;
+			display: block;
+
+			@include mixins.liens_effet(variables.$couleur_accent_fonce, none);
+
+			&:hover {
+				.savoir_plus {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		@include mixins.breakpoint(tablet-petit) {
+			padding: 30px 20px;
+
+			h3 {
+				font-size: 1.45em;
+			}
+
+			.cartes {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+
+				&_saisons {
+					width: 48%;
+				}
+
+				&_conseil {
+					width: 30%;
+				}
+			}
+		}
+
+		@include mixins.breakpoint(tablet-grand) {
+			padding: 40px 20px;
+
+			.cartes_saisons {
+				width: 23%;
+			}
+		}
+	}
+
+	.banniere_waterlogged {
+		object-fit: cover;
+		width: 100%;
+
+		&_wrapper {
+			background: variables.$couleur_noir;
+			color: variables.$couleur_blanc;
+
+			&_texte {
+				padding: 10px 25px;
+				text-align: center;
+
+				button {
+					@include mixins.bouton(
+						variables.$couleur_blanc,
+						variables.$couleur_noir
+					);
+					@include mixins.bouton_effet(
+						variables.$couleur_blanc,
+						variables.$couleur_soutien,
+						variables.$couleur_blanc,
+						variables.$couleur_accent-pale
+					);
+				}
+			}
+		}
+
+		@include mixins.breakpoint(tablet-petit) {
+			&_wrapper {
+				background: transparent;
+				position: relative;
+
+				button {
+					margin: 0;
+				}
+
+				&_texte {
+					border-radius: 0 25px 25px 0;
+					position: absolute;
+					top: 50%;
+					text-align: start;
+					transform: translateY(-50%);
+					margin-left: 25px;
+					width: 50%;
+					z-index: 10;
+				}
+
+				&::after {
+					content: '';
+					background: linear-gradient(
+						to right,
+						variables.$couleur_noir,
+						transparent
+					);
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+				}
+			}
+		}
+
+		@include mixins.breakpoint(desktop-xl) {
+			display: flex;
+			justify-content: center;
+
+			.banniere_waterlogged_wrapper {
+				max-width: 1600px;
+			}
+
+			.banniere_waterlogged_wrapper_texte {
+				left: calc((100% - 1600px) * 0.5);
+				margin-left: 40px;
+			}
+		}
+	}
+
+	@include mixins.breakpoint(tablet-petit) {
+		h2 {
+			font-size: 1.75em;
+		}
+	}
+
+	@include mixins.breakpoint(tablet-grand) {
+		h2 {
+			font-size: 2.25em;
+		}
+	}
+
+	@include mixins.breakpoint(desktop-plus) {
+		grid-column: 1 / 13;
+	}
+}

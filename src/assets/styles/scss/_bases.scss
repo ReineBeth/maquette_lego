@@ -1,0 +1,40 @@
+@use 'variables';
+@use 'placeholders';
+@use 'mixins';
+
+html {
+	font-size: 62.5%;
+
+	body {
+		background: variables.$couleur_blanc;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: auto 1fr auto;
+		gap: 1em;
+		font-family: variables.$font_regulier;
+		min-height: 100vh;
+		
+		img {
+			width: 100%;
+		}
+		
+		ul li {
+			list-style-type: none;
+		}
+
+		a {
+			@extend %reset_liens;
+		}
+
+		button {
+			font-family: variables.$font_regulier;
+
+			@extend %reset_bouton;
+		}
+
+		@include mixins.breakpoint(desktop-plus) {
+			grid-template-columns: repeat(12, 1fr);
+		}
+	}
+}
+
